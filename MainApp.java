@@ -14,10 +14,9 @@ public class MainApp {
         AuthService auth = new AuthService();
         Scanner sc = new Scanner(System.in);
 
-        // 🔐 LOGIN FIRST
         if (!auth.login(sc)) {
             sc.close();
-            return;   // stop program if login fails
+            return;   
         }
 
 
@@ -127,13 +126,14 @@ public class MainApp {
             System.out.print(message);
             if (sc.hasNextInt()) {
                 int value = sc.nextInt();
-                sc.nextLine(); // clear buffer
+                sc.nextLine(); 
                 return value;
             } else {
                 System.out.println("Invalid input! Please enter a number.");
-                sc.next(); // discard wrong input
+                sc.next(); 
             }
         }
     }
     
 }
+
