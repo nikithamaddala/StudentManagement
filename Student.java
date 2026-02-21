@@ -14,25 +14,23 @@ public class Student {
         this.course = course;
     }
 
-    // -------- GETTERS --------
 
     public int getId() {
         return id;
     }
 
-    public String getName() {        // ✅ ADD THIS
+    public String getName() {        
         return name;
     }
 
-    public int getAge() {            // ✅ ADD THIS
+    public int getAge() {          
         return age;
     }
 
-    public String getCourse() {      // ✅ ADD THIS
+    public String getCourse() {      
         return course;
     }
 
-    // -------- SETTERS --------
 
     public void setName(String name) {
         this.name = name;
@@ -51,3 +49,4 @@ public class Student {
         return id + " | " + name + " | " + age + " | " + course;
     }
 }
+
