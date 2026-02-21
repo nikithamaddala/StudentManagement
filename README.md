@@ -1,2 +1,0 @@
-# StudentManagement
-student.py
