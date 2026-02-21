@@ -10,7 +10,6 @@ public class StudentService {
     private ArrayList<Student> students = new ArrayList<>();
     private final String FILE_NAME = "students.txt";
 
-    // Constructor: runs automatically when object is created
     public StudentService() {
         loadFromFile();
     }
@@ -68,7 +67,6 @@ public class StudentService {
         }
     }
 
-    // ---------------- FILE LOGIC ----------------
 
     private void saveToFile() {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_NAME))) {
@@ -102,7 +100,6 @@ public class StudentService {
             System.out.println("Error loading data: " + e.getMessage());
         }
     }
-    // 1. Sort students by name
 public void viewStudentsSortedByName() {
     if (students.isEmpty()) {
         System.out.println("No students found.");
@@ -114,7 +111,7 @@ public void viewStudentsSortedByName() {
             .forEach(System.out::println);
 }
 
-// 2. Filter students by course
+
 public void viewStudentsByCourse(String course) {
     boolean found = false;
 
@@ -130,7 +127,7 @@ public void viewStudentsByCourse(String course) {
     }
 }
 
-// 3. Filter students by age range
+
 public void viewStudentsByAgeRange(int min, int max) {
     boolean found = false;
 
@@ -145,7 +142,7 @@ public void viewStudentsByAgeRange(int min, int max) {
         System.out.println("No students found in this age range.");
     }
 }
-// 4. Export students to CSV file
+
 public void exportToCSV() {
     if (students.isEmpty()) {
         System.out.println("No students to export.");
@@ -154,10 +151,10 @@ public void exportToCSV() {
 
     try (FileWriter writer = new FileWriter("students.csv")) {
 
-        // Header
+        
         writer.append("ID,Name,Age,Course\n");
 
-        // Data
+        
         for (Student s : students) {
             writer.append(s.getId() + ","
                         + s.getName() + ","
@@ -174,3 +171,4 @@ public void exportToCSV() {
 
 
 }
+
